@@ -60,7 +60,7 @@ def hangman(word):
 
             # If the guessed letter IS found in the secret word
             else:
-                print(f"Good job, {guess} is in the word!")
+                print(f"\033[1;32;40mGood job, {guess} is in the word!\033[0m")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [i for i, char in enumerate(word) if char == guess]
@@ -97,9 +97,10 @@ def hangman(word):
 
     # If the player wins or loses
     if guessed:
-        print("Congrats, you guessed the word! You win!")
+        print("\033[1;32;40mCongrats, you guessed the word! You win!\033[0m")
     else:
-        print("Sorry, you ran out of turns. The word was " + word + ". Maybe next time!")
+        print("\033[1;31;40mSorry, you ran out of turns. The word was " + word + ". \
+              Maybe next time!\033[0m")
 
 # Displaying the hangman
 def display_hangman(turns):
