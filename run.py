@@ -48,7 +48,7 @@ def hangman(word):
                 print("You already guessed the letter. \
                       Guessed letters:", formatted_letters_list)
                 time.sleep(0.5)
-            
+
             # If the guessed letter is NOT found in the secret word
             elif guess not in word:
                 formatted_letters_list = " ".join(guessed_letters)
@@ -84,7 +84,7 @@ def hangman(word):
             else:
                 guessed = True
                 word_completion = word
-        
+
         # If the player guesses a number, a special character
         # or a word that is wrong length.
         else:
@@ -99,8 +99,9 @@ def hangman(word):
     if guessed:
         print("\033[1;32;40mCongrats, you guessed the word! You win!\033[0m")
     else:
-        print("\033[1;31;40mSorry, you ran out of turns. The word was " + word + ". \
-              Maybe next time!\033[0m")
+        print("\033[1;31;40mSorry, you ran out of turns. The word \
+        was " + word + ". Maybe next time!\033[0m")
+
 
 # Displaying the hangman
 def display_hangman(turns):
@@ -189,3 +190,4 @@ def main():
 # checks if the executed file is the main program and run the main function
 if __name__ == "__main__":
     main()
+    
