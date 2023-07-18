@@ -83,4 +83,93 @@ def hangman(word):
                 time.sleep(0.5)
             else:
                 guessed = True
-                word_completion = word   
+                word_completion = word
+        
+        # If the player guesses a number, a special character
+        # or a word that is wrong length.
+        else:
+            print("Not a single letter or words length is \
+            not the same as the secret word.")
+            time.sleep(0.5)
+        print(display_hangman(turns))
+        print("Secret word: " + word_completion)
+        print("\n")
+
+    # If the player wins or loses
+    if guessed:
+        print("Congrats, you guessed the word! You win!")
+    else:
+        print("Sorry, you ran out of turns. The word was " + word + ". Maybe next time!")
+
+# Displaying the hangman
+def display_hangman(turns):
+    """
+    The steps in hangman
+    """
+    stages = {
+        0: """
+                ___________
+               | /        |
+               |/        ( )
+               |         /|\\
+               |         / \\
+               |
+           """,
+        1: """
+                ___________
+               | /        |
+               |/        ( )
+               |         /|\\
+               |         /
+               |
+            """,
+        2: """
+                ___________
+               | /        |
+               |/        ( )
+               |         /|\\
+               |
+               |
+            """,
+        3: """
+                ___________
+               | /        |
+               |/        ( )
+               |
+               |
+               |
+            """,
+        4: """
+                ___________
+               | /        |
+               |/
+               |
+               |
+               |
+            """,
+        5: """
+                ___________
+               | /
+               |/
+               |
+               |
+               |
+            """,
+        6: """
+               | /
+               |/
+               |
+               |
+               |
+            """,
+        7: """
+               |
+               |
+               |
+               |
+               |
+            """,
+        8: "",
+    }
+    return stages[turns]
+
