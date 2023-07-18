@@ -173,3 +173,18 @@ def display_hangman(turns):
     }
     return stages[turns]
 
+
+def main():
+    """
+    The main function of the game
+    """
+    word = get_word()
+    hangman(word)
+    while input("Play again? (Y/N) ").upper() == "Y":
+        word = get_word()
+        hangman(word)
+
+
+# checks if the executed file is the main program and run the main function
+if __name__ == "__main__":
+    main()
