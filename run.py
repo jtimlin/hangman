@@ -2,6 +2,7 @@
 import random
 import time
 from words import word_list
+from hangman_structure import display_hangman
 
 
 def get_word():
@@ -101,79 +102,6 @@ def hangman(word):
     else:
         print("\033[1;31;40mSorry, you ran out of turns. The word \
         was " + word + ". Maybe next time!\033[0m")
-
-
-# Displaying the hangman
-def display_hangman(turns):
-    """
-    The steps in hangman
-    """
-    stages = {
-        0: """
-                ___________
-               | /        |
-               |/        ( )
-               |         /|\\
-               |         / \\
-               |
-           """,
-        1: """
-                ___________
-               | /        |
-               |/        ( )
-               |         /|\\
-               |         /
-               |
-            """,
-        2: """
-                ___________
-               | /        |
-               |/        ( )
-               |         /|\\
-               |
-               |
-            """,
-        3: """
-                ___________
-               | /        |
-               |/        ( )
-               |
-               |
-               |
-            """,
-        4: """
-                ___________
-               | /        |
-               |/
-               |
-               |
-               |
-            """,
-        5: """
-                ___________
-               | /
-               |/
-               |
-               |
-               |
-            """,
-        6: """
-               | /
-               |/
-               |
-               |
-               |
-            """,
-        7: """
-               |
-               |
-               |
-               |
-               |
-            """,
-        8: "",
-    }
-    return stages[turns]
 
 
 def main():
