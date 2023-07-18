@@ -17,7 +17,7 @@ def hangman(word):
     The main function of the game. Time module makes
     the game more pleasing to play.
     """
-    
+
     # Welcoming the user
     name = input("What is your name? ")
     print(f"Hello, {name}. Time to play hangman!")
@@ -49,7 +49,7 @@ def hangman(word):
                       Guessed letters:", formatted_letters_list)
                 time.sleep(0.5)
             
-            # If the guessed word is not found in the secret word
+            # If the guessed letter is NOT found in the secret word
             elif guess not in word:
                 formatted_letters_list = " ".join(guessed_letters)
                 print(guess, "is not in the word. \
@@ -57,3 +57,30 @@ def hangman(word):
                 turns -= 1
                 guessed_letters.append(guess)
                 time.sleep(0.5)
+
+            # If the guessed letter IS found in the secret word
+            else:
+                print(f"Good job, {guess} is in the word!")
+                guessed_letters.append(guess)
+                word_as_list = list(word_completion)
+                indices = [i for i, char in enumerate(word) if char == guess]
+                for index in indices:
+                    word_as_list[index] = guess
+                word_completion = "".join(word_as_list)
+                if "_" not in word_completion:
+                    guessed = True
+                time.sleep(0.5)
+
+        # If the player guesses the whole word
+        elif len(guess) == len(word) and guess.isalpha():
+            if guess in guessed_words:
+                print("You already guessed the word", guess)
+                time.sleep(0.5)
+            elif guess != word:
+                print(guess, "is not the word.")
+                turns -= 1
+                guessed_words.append(guess)
+                time.sleep(0.5)
+            else:
+                guessed = True
+                word_completion = word   
