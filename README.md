@@ -45,7 +45,8 @@
 ## Technologies used
 
 ### Languages
-. Python
+
+* Python
 
 ## Frameworks, Deployement & Libraries
 
@@ -67,7 +68,7 @@
 
 ## Accessibility
 
-* The whole project was built using python, therefore no other langueges were used.
+* The whole project was built using python, therefore no other languages were used.
 
 ## Issues and bugs
 
@@ -78,9 +79,10 @@
 * Too long lines and whitespaces. I tried using the backslash but i made huge gaps between the text so i used two print messages instead of one.
 
 ## Validator Testing
-I ran through my file in [](https://pep8ci.herokuapp.com/)
 
-The Code has whitespace and too long lines warnings and I did rectify these.
+I ran through my file in [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+The Code had whitespace and too long lines warnings and I did rectify these.
 
 ## Deployment
 
