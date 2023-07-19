@@ -4,7 +4,7 @@
 
 #### Live Site [Here](#)
 
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
+![alt text](doc/main.png)
 
 #### How to play
 
@@ -16,28 +16,31 @@
 * If the player cannot guess the word and exceeds the lives, the hangman will be completed and the game will be over.
 
 ## Features
-The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. 
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
+* The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. 
 
 * When the user types their name, a hello message will appear displaying their name and the game will begin. The program will also display the number of letters in the word.
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.34.08.png)
 
-If the letter guessed by the user matches any of the letters in the word, the letter will appear in the blank space where that letter belongs. In the following screenshot, the letter "a" was guessed and it appeared on the blank space.
+* If the letter guessed by the user matches any of the letters in the word, the letter will appear in the blank space where that letter belongs.
 
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.37.38.png)
+![alt text](doc/game-start.png)
 
-User can only guess a letter, if they use a number or a special character, then they will get an error message that they have to select a letter.
+* Users are limited to guessing either a letter or a word. If they input a number or a special character, an error message will appear, prompting them to choose a letter or ensure that the length of the word matches the secret word.
 
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.39.47.png)
+![alt text](doc/invalid-choice.png)
 
-* If the letter guessed by the user is incorrect, the hangman picture will be populated piece by piece, starting from head to the legs. Also, the wrong letter will be displayed to the user. If the user selects a letter that has already been chosen, the following message will appear "You already guessed it, please try again". The following screenshot displays the message. A list with already chosen and wrong letters appears so the user knows wich letters they already choosed.![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.42.07.png)
-* If the user is unable to guess the word in 9 attempts, the hangman will be completed and the user will lose the game. To replay the game, the user will need to click on run the program and the game will restart.![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)
+* If the letter guessed by the user is incorrect, the hangman picture will be populated piece by piece. If the user selects a letter that has already been chosen, the following message will appear "You already guessed the letter". Also, the wrong letter will be displayed to the user. The following screenshot displays the message. A list with already chosen and wrong letters appears so the user knows wich letters they already choosed.
+
+![alt text](doc/wrong-choice.png)
+
+* If the user is unable to guess the word in 8 attempts, the hangman will be completed and the user will lose the game. The secret word will be displayed to the user. Game will ask user to play again with "Y/N?" question.
+
+![alt text](doc/end.png)
 
 * If the user can guess the word, the user will receive a congratulations message and they will win the game.
 
 ## Future features
 
-I'll add a function that shows what the right word was in case the choice was wrong.
+* Show the user how many guesses they have left.
 
 ## Technologies used
 
@@ -48,42 +51,40 @@ I'll add a function that shows what the right word was in case the choice was wr
 
 * [Github](https://github.com/)
 
-* [Gitpod](https://gitpod.io)
+* [Codeanywhere](https://app.codeanywhere.com/)
+
+* [Heroku](https://heroku.com/)
+
+* VSCode
 
 ## Testing
 
-* Testing was done throughout the project mainly by running the program in the terminal as well as python debugger. I committed the codes to github after writing every new list or code.
+* Testing was done throughout the project mainly by running the program in the terminal as well as python debugger.
 
 * I used the deployed site to manually type correct and incorrect data to validate and see how the program responded.
 
+* I ran program trough CI Python Linter time to times.
+
 ## Accessibility
 
-* There are no images on the site.
 * The whole project was built using python, therefore no other langueges were used.
 
 ## Issues and bugs
 
-* When I play the game I discovered that it is difficult to guess the correct word. I do not know if it is bugs in code or what it may be due to.
+* 
 
 ## Fixed bugs
 
-I resubmitt this project because my previous code didn't have the ability to validate all types of inputs like characters and empty inputs. This also caused users to lose lives when they typed wrong inputs. Now it is fixed and in the event of incorrect entries, users are notified that "Invalid code, please enter again" ![alt text](doc/invalid.png)
+* Too long lines and whitespaces. I tried using the backslash but i made huge gaps between the text so i used two print messages instead of one.
 
 ## Validator Testing
 I ran through my file in [](https://pep8ci.herokuapp.com/)
 
-The Code has warnings and I did rectify these.
-![alt text](doc/Ska%CC%88rmavbild%202022-12-09%20validate.png) 
-
+The Code has whitespace and too long lines warnings and I did rectify these.
 
 ## Deployment
 
-I followed the below steps when deploying my project to Heroku, based on the Code Institute instructions:
-
-* Add to requirements.txt file:-
-pip3 freeze > requirements.txt
-Commit changes to Github:
-git commit -m "Add requirements for deployment”
+I followed the below steps when deploying my project to Heroku, based on the Code Institute instructions.
 
 In HEROKU after creating the account:
 
@@ -101,9 +102,9 @@ In HEROKU after creating the account:
 
 7. Scroll down to Buildpacks and press the icon for Python, click Save Changes, then press the icon for Nodejs and save changes. These Buildpacks need to be in below order:
 
-Python NodeJS
+Python NodeJS - they need to be in that order.
 
-8. Go to Deploy section tab and scroll down to Deployment Method. I connected to my Github pages and could thereafter search for my Github Repository "Parents Allowance Calculator" and then click connect.
+8. Go to Deploy section tab and scroll down to Deployment Method. I connected to my Github pages and could thereafter search for my Github Repository "Hangman" and then click connect.
 
 9. Scroll down to Automatic and Manual Deploys sections. I clicked on Automatic Deployment so that my changes that I push to github automatically updates in Heroku.
 
@@ -113,14 +114,10 @@ Python NodeJS
 
 ## Credits
 
-[Fabio M](https://www.youtube.com/watch?v=lJ7RhvNvsnc&t=1s) This tutorial was helpful for me to build the game. I followed it step by step. 
+[Python for beginners](https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman) Basics of the code to understand how its done.
 
-[Github](https://github.com/) Help with add code to handle invalid input from user like numbers or other characters.
+[YouTube](https://www.youtube.com/watch?v=m4nEnsavl6w) Tutorial for HANGMAN game by Kite. Big parts of the code is from this tutorial.
 
-[Github](https://github.com/) Help with add function that welcomes users and ask them to type theirs name.
+[Flexiple](https://flexiple.com/python/python-print-list/) This helped me to format the guessed letters list to more readable.
 
-## Special Thanks
-
-Specials thanks to Student Turtor Assistance for theirs patience and skills that made me complete this project. 
-
-A special thanks my mentor Martina Terlević for being there for me and allways give inspiration and support.
+[Kaggle](https://www.kaggle.com/discussions/general/273188) Text coloring in python.
