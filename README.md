@@ -72,11 +72,13 @@
 
 ## Issues and bugs
 
-* 
+* No known bugs.
 
 ## Fixed bugs
 
 * Too long lines and whitespaces. I tried using the backslash but i made huge gaps between the text so i used two print messages instead of one.
+
+* Game didnt show guessed letters if user guessed letter right.
 
 ## Validator Testing
 

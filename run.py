@@ -50,6 +50,7 @@ def hangman(word):
             # If player puts a letter that is already guessed
             if guess in guessed_letters:
                 print("You already guessed the letter.")
+                formatted_letters_list = ", ".join(guessed_letters)
                 print("Guessed letters:", formatted_letters_list)
                 time.sleep(0.5)
 
@@ -65,6 +66,8 @@ def hangman(word):
             # If the guessed letter IS found in the secret word
             else:
                 print(f"\033[1;32;40mGood job, {guess} is in the word!\033[0m")
+                formatted_letters_list = ", ".join(guessed_letters)
+                print("Guessed letters:", formatted_letters_list)
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [i for i, char in enumerate(word) if char == guess]
