@@ -16,7 +16,7 @@
 * If the player cannot guess the word and exceeds the lives, the hangman will be completed and the game will be over.
 
 ## Features
-The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. The username must be letters only, if the user puts a number, an error message with appear instructing the user that the name must be letters only 
+The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. 
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
 
 * When the user types their name, a hello message will appear displaying their name and the game will begin. The program will also display the number of letters in the word.

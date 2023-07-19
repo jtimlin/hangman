@@ -29,6 +29,7 @@ def hangman(word):
     guessed_letters = []
     guessed_words = []
     turns = 8
+    letters_word = list(word)
 
     # Setting up the game
     time.sleep(1)
@@ -36,6 +37,7 @@ def hangman(word):
     print("Start guessing...")
     print(display_hangman(turns))
     print("Secret word: " + word_completion)
+    print('The word has {} letters.'.format(len(letters_word)))
     print("\n")
     time.sleep(0.5)
 
