@@ -101,7 +101,8 @@ def hangman(word):
         print("\033[1;32;40mCongrats, you guessed the word! You win!\033[0m")
     else:
         print("\033[1;31;40mSorry, you ran out of turns.\033[0m")
-        print("\033[1;31;40mThe word was " + word + ". Maybe next time!\033[0m")
+        print(f"\033[1;31;40mThe word was {word}. Maybe next time!\033[0m")
+
 
 def main():
     """
@@ -117,4 +118,3 @@ def main():
 # checks if the executed file is the main program and run the main function
 if __name__ == "__main__":
     main()
-    
