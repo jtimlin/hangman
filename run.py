@@ -20,7 +20,7 @@ def hangman(word):
     """
 
     # Welcoming the user
-    print("Welcome to Hangman game!)
+    print("Welcome to Hangman game!")
     name = input("What is your name? ")
     print(f"Hello, {name}. Time to play!")
 
