@@ -127,3 +127,5 @@ Python NodeJS - they need to be in that order.
 [Flexiple](https://flexiple.com/python/python-print-list/) This helped me to format the guessed letters list to more readable.
 
 [Kaggle](https://www.kaggle.com/discussions/general/273188) Text coloring in python.
+
+[GitHub](https://github.com/Meyaal/Hangman-game) This helped with username validation.
