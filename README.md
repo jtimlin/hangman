@@ -80,6 +80,8 @@
 
 * Game didnt show guessed letters if user guessed letter right.
 
+* After going through my code with my mentor Martina Terlevic, she pointed out that the username input didn't handle cases when the player simply pressed enter, resulting in an empty username. Similarly, the play again question only responded to the letter 'Y'. To address these issues, I added validation for both scenarios.
+
 ## Validator Testing
 
 I ran through my file in [CI Python Linter](https://pep8ci.herokuapp.com/)
