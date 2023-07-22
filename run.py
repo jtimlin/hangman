@@ -13,16 +13,48 @@ def get_word():
     return word.lower()
 
 
+def user_welcome():
+    """
+    This function allows user to
+    type their name only with letters.
+    """
+    username = None
+
+    while True:
+        print("Welcome to Hangman game!")
+        username = input("What is your name? ")
+        
+        if not username.isalpha():
+            print("Username must be alphabets only.")
+            continue
+        else:
+            print(f"Hello, {username}. Time to play!")
+            break
+
+
+def play_again():
+    """
+    This function prompts the user to decide whether they want
+    to play again. If the user inputs 'y' or 'Y', the game
+    will start over. Otherwise, it will shut down.
+    """
+    play = None
+
+    while True:
+        play = input("Play again? (Y/N) ").lower()
+        
+        if play == "y":
+            main()
+        else:
+            print(f"You have left the game.")
+            exit()
+
+
 def hangman(word):
     """
     The main function of the game. Time module makes
     the game more pleasing to play.
     """
-
-    # Welcoming the user
-    print("Welcome to Hangman game!")
-    name = input("What is your name? ")
-    print(f"Hello, {name}. Time to play!")
 
     # Here we set the secret
     word_completion = "_" * len(word)
@@ -105,9 +137,11 @@ def hangman(word):
     # If the player wins or loses
     if guessed:
         print("\033[1;32;40mCongrats, you guessed the word! You win!\033[0m")
+        play_again()
     else:
         print("\033[1;31;40mSorry, you ran out of turns.\033[0m")
         print(f"\033[1;31;40mThe word was {word}. Maybe next time!\033[0m")
+        play_again()
 
 
 def main():
@@ -115,10 +149,8 @@ def main():
     The main function of the game
     """
     word = get_word()
+    user_welcome()
     hangman(word)
-    while input("Play again? (Y/N) ").upper() == "Y":
-        word = get_word()
-        hangman(word)
 
 
 # checks if the executed file is the main program and run the main function
