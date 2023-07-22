@@ -23,7 +23,7 @@ def user_welcome():
     while True:
         print("Welcome to Hangman game!")
         username = input("What is your name? ")
-        
+
         if not username.isalpha():
             print("Username must be alphabets only.")
             continue
@@ -42,7 +42,7 @@ def play_again():
 
     while True:
         play = input("Play again? (Y/N) ").lower()
-        
+
         if play == "y":
             main()
         else:
